@@ -1,6 +1,6 @@
 // script.js
 function countdown() {
-  const targetDate = new Date("2024-03-13T00:00:00Z"); // Tanggal Ramadhan 1445 H/2024
+  const targetDate = new Date("2024-03-11T00:00:00Z"); // Tanggal Ramadhan 1445 H/2024
   const now = new Date().getTime();
   const distance = targetDate - now;
 
