@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown to Ramadhan 1445 H/2024</title>
+  <style>
+    /* CSS untuk styling */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #countdown {
+      font-size: 36px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Countdown to Ramadhan 1445 H/2024</h1>
+  <div id="countdown"></div>
+
+  <script>
+    // JavaScript untuk hitungan mundur
+    function countdown() {
+      const targetDate = new Date("2024-03-23T00:00:00Z"); // Tanggal Ramadhan 1445 H/2024
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML = `
+        ${days} hari
+        ${hours} jam
+        ${minutes} menit
+        ${seconds} detik
+      `;
+
+      if (distance < 0) {
+        clearInterval(interval);
+        document.getElementById("countdown").innerHTML = "Ramadhan telah dimulai!";
+      }
+    }
+
+    // Memanggil countdown() setiap detik
+    countdown();
+    const interval = setInterval(countdown, 1000);
+  </script>
+</body>
+</html>
