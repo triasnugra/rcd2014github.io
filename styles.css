@@ -41,7 +41,7 @@ h1 {
   display: block;
   font-size: 24px;
   margin-bottom: 6px;
-  color: #555;
+  color: #6495ED;
 }
 
 .time-unit span:first-child {
@@ -49,38 +49,3 @@ h1 {
   color: #333;
 }
 
-/* styles.css */
-/* ... (kode CSS sebelumnya) */
-
-.time-unit {
-  text-align: center;
-}
-
-/* Ganti warna untuk setiap unit waktu */
-.days {
-  color: #FF5733; /* Warna untuk Days */
-}
-
-.hours {
-  color: #C70039; /* Warna untuk Hours */
-}
-
-.minutes {
-  color: #900C3F; /* Warna untuk Minutes */
-}
-
-.seconds {
-  color: #581845; /* Warna untuk Seconds */
-}
-
-.time-unit span {
-  display: block;
-  font-size: 24px;
-  margin-bottom: 6px;
-  color: #555; /* Warna default untuk angka */
-}
-
-.time-unit span:first-child {
-  font-size: 36px;
-  color: #333;
-}
